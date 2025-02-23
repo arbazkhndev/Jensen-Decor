@@ -1,10 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
 
 .header {
-    background-color: #ffffff;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     padding: 20px 0;
-    border-bottom: 1px solid #d3d3d3;
     text-align: center;
+    transition: background 0.3s ease-in-out;
 }
+
+.header .logo, 
+.header .top-nav a, 
+.header .nav .nav-item .nav-link, 
+.header-icons i {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.header:hover {
+    background: white;
+}
+
+.header:hover .logo, 
+.header:hover .top-nav a, 
+.header:hover .nav .nav-item .nav-link, 
+.header:hover .header-icons i {
+    color: #333; 
+}
+
+.nav .nav-item .nav-link:hover {
+    color: #a07b5e !important; 
+}
+
+.header .logo:hover, .top-nav a:hover {
+    color: #a07b5e !important; 
+}
+
+.header-icons i:hover {
+    color: #a07b5e !important;
+}
+
 .logo {
     font-family: 'Cinzel', serif;
     font-size: 34px;
@@ -47,26 +90,112 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    color: #333;
+    color: white;
     margin: 0 15px;
     transition: color 0.3s ease;
     text-transform: uppercase;
 }
-.nav .nav-item .nav-link:hover {
+.header:hover .nav .nav-item .nav-link {
+    color: #333;
+}
+
+/* --------------------------- Style for the icons --------------------------- */
+.header-icons {
+    position: absolute;
+    right: 80px; 
+    top: 37px;
+    display: flex;
+    gap: 25px;
+}
+
+.header-icons i {
+    font-size: 20px;
+    color: white; 
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.header-icons i:hover {
     color: #a07b5e;
 }
 
-/* Responsive Styles */
+
+/* -------------------- Hero Section ------------------------ */
+.hero {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Assets/Images/Paris.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.8s ease-in-out;
+}
+
+.hero:hover::before {
+    transform: scale(1.1); 
+}
+
+.hero-content-bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+    text-align: left;
+}
+
+.hero-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-btn {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: #333;
+    padding: 12px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: #a07b5e;
+    color: white;
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
-    .top-nav {
-        flex-direction: column;
-        align-items: center;
+    .hero-content-bottom {
+        bottom: 30px;
+        left: 20px;
     }
-    .nav {
-        flex-direction: column;
-        align-items: center;
+
+    .hero-text {
+        font-size: 16px;
     }
-    .nav .nav-item {
-        margin-bottom: 10px;
+
+    .hero-btn {
+        font-size: 14px;
+        padding: 10px 16px;
     }
 }
