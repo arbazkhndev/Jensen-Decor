@@ -241,6 +241,7 @@
     font-size: 20px;
     display: block;
     color: #333;
+    transition: color 0.3s ease-in-out;
 }
 
 .interactive-nav-item span {
@@ -248,6 +249,19 @@
     font-size: 14px;
     color: #666;
     margin-top: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.interactive-nav-item:hover {
+    color: #a07b5e;
+}
+
+.interactive-nav-item:hover i {
+    color: #a07b5e;
+}
+
+.interactive-nav-item:hover span {
+    color: #a07b5e;
 }
 
 .underline {
@@ -275,6 +289,7 @@
         display: none; 
     }
 }
+
 /* --------------------------- Products Section --------------------------- */
 
 .product-card {
