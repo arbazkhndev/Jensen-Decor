@@ -21,6 +21,7 @@
                 </div>            
             </div>
             <nav class="top-nav">
+                <a href="#">Comparison</a>
                 <a href="#">Community</a>
                 <a href="#">About Us</a>
                 <a href="#">Contact Us</a>
@@ -81,7 +82,7 @@
             </div>
         </section>
     
-        <!-- Products Section -->
+        <!-- Products Section
         <section id="products" class="products-section">
             <div class="container">
                 <div class="row">
@@ -106,7 +107,7 @@
                 </div>
             </div>
         </section>
-</section>
+</section> -->
     
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -131,6 +132,109 @@
     });
 });
 </script>
+
+<!-- Explore Section -->
+<section class="explore-section">
+    <div class="explore-container">
+        <div class="explore-text">
+            <h2>More to Explore</h2>
+            <p>Discover our latest collections and bestsellers.</p>
+        </div>
+        <div class="slider-wrapper">
+            <button class="prev-btn">&#10094;</button>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Category 1"></a><p>Category 1</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Category 2"></a><p>Category 2</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Paris.jpg" alt="Category 3"></a><p>Category 3</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Category 4"></a><p>Category 4</p></div>
+                </div>
+            </div>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    let index = 0;
+    let totalSlides = slider.children.length;
+    let autoplayInterval;
+
+    function setPositionByIndex() {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function moveNext() {
+        index = (index + 1) % totalSlides;
+        setPositionByIndex();
+    }
+
+    function movePrev() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        setPositionByIndex();
+    }
+
+    function startAutoplay() {
+        autoplayInterval = setInterval(moveNext, 2000);
+    }
+
+    prevBtn.addEventListener("click", function () {
+        clearInterval(autoplayInterval);
+        movePrev();
+        startAutoplay();
+    });
+
+    nextBtn.addEventListener("click", function () {
+        clearInterval(autoplayInterval);
+        moveNext();
+        startAutoplay();
+    });
+
+    startAutoplay();
+});
+</script>
+
+<!-- Brand Slider Section -->
+<div class="brand-slider">
+    <div class="brand-track">
+        <div class="brand"><img src="Assets/Images/1655979298paypal-logo-png-transparent.png" alt="Brand 1"></div>
+        <div class="brand"><img src="Assets/Images/1659109767etsy-logo-png.png" alt="Brand 2"></div>
+        <div class="brand"><img src="Assets/Images/1660059848transparent-cash-app-logo.png" alt="Brand 3"></div>
+        <div class="brand"><img src="Assets/Images/1685121928zelle-logo.png" alt="Brand 4"></div>
+        <div class="brand"><img src="Assets/Images/1686206978pinterest-logo-transparent.png" alt="Brand 5"></div>
+        <div class="brand"><img src="Assets/Images/1688361055amazon-logo-png.png" alt="Brand 6"></div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const brandTrack = document.querySelector(".brand-track");
+    const brands = document.querySelectorAll(".brand");
+
+    brands.forEach((brand) => {
+        const clone = brand.cloneNode(true);
+        brandTrack.appendChild(clone);
+    });
+});
+</script>
+
+<section class="info-section">
+    <div class="info-container">
+        <div class="info-text">
+            <h2>Transform Your Space with Elegance</h2>
+            <p>Discover premium wall decor that brings life to your interiors while supporting sustainable craftsmanship.</p>
+            <a href="#" class="info-btn">Explore Now</a>
+        </div>
+        <div class="info-image">
+            <img src="Assets/Images/Miami.jpg" alt="Wall Decor Display">
+        </div>
+    </div>
+</section>
+
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
