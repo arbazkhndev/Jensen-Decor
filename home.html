@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jensen Decor | Wall Decor</title>
+    <link rel="stylesheet" href="Assets/CSS/home.css">
+    <script src="Assets/JavaScript/interactive-nav.js"></script>
+    <script src="Assets/JavaScript/slider.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Assets/CSS/home.css">
+   
 </head>
 <body>
 
@@ -82,57 +85,6 @@
             </div>
         </section>
     
-        <!-- Products Section
-        <section id="products" class="products-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="product-card">
-                            <img src="Assets/Images/Miami.jpg" class="img-fluid" alt="Metal Wall Art">
-                            <h3>Metal Wall Art</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="product-card">
-                            <img src="Assets/Images/Paris.jpg" class="img-fluid" alt="Wallpapers">
-                            <h3>Wallpapers</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="product-card">
-                            <img src="Assets/Images/Miami.jpg" class="img-fluid" alt="Photo Frame Art">
-                            <h3>Photo Frame Art</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-</section> -->
-    
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const navItems = document.querySelectorAll(".interactive-nav-item");
-    const underline = document.querySelector(".underline");
-
-    function moveUnderline(item) {
-        const { width, left } = item.getBoundingClientRect();
-        const containerLeft = document.querySelector(".nav-container").getBoundingClientRect().left;
-        
-        underline.style.width = `${width}px`; // Match width of hovered item
-        underline.style.transform = `translateX(${left - containerLeft}px)`;
-    }
-
-    navItems.forEach(item => {
-        item.addEventListener("mouseenter", () => moveUnderline(item));
-    });
-
-    // Optional: Reset underline when mouse leaves the menu
-    document.querySelector(".nav-container").addEventListener("mouseleave", () => {
-        underline.style.width = "0px";
-    });
-});
-</script>
-
 <!-- Explore Section -->
 <section class="explore-section">
     <div class="explore-container">
@@ -155,59 +107,15 @@
     </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-    let index = 0;
-    let totalSlides = slider.children.length;
-    let autoplayInterval;
-
-    function setPositionByIndex() {
-        slider.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function moveNext() {
-        index = (index + 1) % totalSlides;
-        setPositionByIndex();
-    }
-
-    function movePrev() {
-        index = (index - 1 + totalSlides) % totalSlides;
-        setPositionByIndex();
-    }
-
-    function startAutoplay() {
-        autoplayInterval = setInterval(moveNext, 2000);
-    }
-
-    prevBtn.addEventListener("click", function () {
-        clearInterval(autoplayInterval);
-        movePrev();
-        startAutoplay();
-    });
-
-    nextBtn.addEventListener("click", function () {
-        clearInterval(autoplayInterval);
-        moveNext();
-        startAutoplay();
-    });
-
-    startAutoplay();
-});
-</script>
 
 <!-- Brand Slider Section -->
-<div class="brand-slider">
-    <div class="brand-track">
-        <div class="brand"><img src="Assets/Images/1655979298paypal-logo-png-transparent.png" alt="Brand 1"></div>
-        <div class="brand"><img src="Assets/Images/1659109767etsy-logo-png.png" alt="Brand 2"></div>
-        <div class="brand"><img src="Assets/Images/1660059848transparent-cash-app-logo.png" alt="Brand 3"></div>
-        <div class="brand"><img src="Assets/Images/1685121928zelle-logo.png" alt="Brand 4"></div>
-        <div class="brand"><img src="Assets/Images/1686206978pinterest-logo-transparent.png" alt="Brand 5"></div>
-        <div class="brand"><img src="Assets/Images/1688361055amazon-logo-png.png" alt="Brand 6"></div>
-    </div>
+<div class="brand-track">
+    <img class="brand" src="Assets/Images/1655979298paypal-logo-png-transparent.png" alt="Brand 1">
+    <img class="brand" src="Assets/Images/1659109767etsy-logo-png.png" alt="Brand 2">
+    <img class="brand" src="Assets/Images/1660059848transparent-cash-app-logo.png" alt="Brand 3">
+    <img class="brand" src="Assets/Images/1685121928zelle-logo.png" alt="Brand 4">
+    <img class="brand" src="Assets/Images/1686206978pinterest-logo-transparent.png" alt="Brand 5">
+    <img class="brand" src="Assets/Images/1688361055amazon-logo-png.png" alt="Brand 6">
 </div>
 
 <script>
@@ -215,13 +123,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const brandTrack = document.querySelector(".brand-track");
     const brands = document.querySelectorAll(".brand");
 
+    // Clone each brand image and append it to the track
     brands.forEach((brand) => {
         const clone = brand.cloneNode(true);
-        brandTrack.appendChild(clone);
+        brandTrack.appendChild(clone); // Append the cloned image after the original
     });
 });
 </script>
 
+
+<!-- info section -->
 <section class="info-section">
     <div class="info-container">
         <div class="info-text">

@@ -290,59 +290,6 @@
     }
 }
 
-/* --------------------------- Products Section --------------------------- */
-/* 
-.product-card {
-    text-align: center;
-    margin-bottom: 30px;
-    overflow: hidden;
-    border-radius: 15px;
-    position: relative;
-    padding: 16px;
-    box-shadow: 0px 0px 20px 8px rgba(160, 123, 94, 0.8); 
-    transition: transform 0.3s ease-in-out;
-}
-
-
-.product-card:hover {
-    transform: scale(1.02);
-}
-
-.product-card img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Text styling */
-/* .product-card h3 {
-    margin-top: 15px;
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #333;
-    transition: color 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.product-card h3:hover {
-    color: #a07b5e;
-}
-
-
-@media (max-width: 992px) {
-    .product-card img {
-        height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .product-card img {
-        height: 300px;
-    }
-}
-  */
 
 /* ------------------------- explore sction ---------------------------- */
 
@@ -466,47 +413,73 @@ button:hover {
 }
 
 /* ------------------------- Brand Section ---------------------------- */
-.brand-slider {
+
+/* Container to hold the brand images and restrict overflow */
+.brand-slider-container {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Hide anything that moves outside the container */
     background-color: #a07b5e; 
     padding: 20px 0;
-    white-space: nowrap;
-    position: relative;
 }
 
+/* Style the brand track */
 .brand-track {
     display: flex;
-    width: max-content;
-    animation: scroll 15s linear infinite;
+    width: max-content; /* Ensures the track has enough width to contain all images */
+    animation: scroll 20s linear infinite; /* Smooth scrolling */
 }
 
+/* Style for individual brand images */
 .brand {
     flex: 0 0 auto;
-    width: 100px; 
-    margin: 0 15px;
+    margin: 0 15px; /* Space between images */
 }
 
-.brand img {
-    width: 80px; 
-    height: 40px; 
-    object-fit: contain; 
-    filter: brightness(0) invert(0); 
+.brand-track img {
+    width: 80px; /* Set a fixed width for the images */
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0) invert(0);
     transition: filter 0.3s ease-in-out;
 }
 
-.brand img:hover {
-    filter: brightness(1) invert(0); 
+.brand-track img:hover {
+    filter: brightness(1) invert(0);
 }
 
+/* Keyframe animation for continuous scrolling */
 @keyframes scroll {
-    from {
-        transform: translateX(0);
+    0% {
+        transform: translateX(0); /* Start at the initial position */
     }
-    to {
-        transform: translateX(-50%);
+    100% {
+        transform: translateX(-100%); /* Move the entire width of the images (including clones) */
     }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .brand-track img {
+        width: 60px; /* Adjust image size for tablet */
+        height: 30px;
+    }
+
+    .brand-track {
+        padding: 10px 0;
+    }
+
+    .brand {
+        margin: 0 10px; /* Less margin on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-track img {
+        width: 50px; /* Even smaller images for small screens */
+        height: 25px;
+    }
+}
+
 
 /* ----------------------- info section ------------------ */
 

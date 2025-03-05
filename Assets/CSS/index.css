@@ -18,10 +18,10 @@ body {
     transition: 0.5s ease-in-out;
 }
 .left {
-    background: url(/Assets/Images/Miami.jpg) center/cover no-repeat;
+    background: url(../Images/Miami.jpg) center/cover no-repeat;
 }
 .right {
-    background: url(/Assets/Images/Paris.jpg) center/cover no-repeat;
+    background: url(../Images/Paris.jpg) center/cover no-repeat;
 }
 .overlay {
     position: absolute;
