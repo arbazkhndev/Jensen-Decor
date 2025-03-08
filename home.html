@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jensen Decor | Wall Decor</title>
     <link rel="stylesheet" href="Assets/CSS/home.css">
+    <script src="Assets/JavaScript/dropdown.js"></script>
     <script src="Assets/JavaScript/interactive-nav.js"></script>
     <script src="Assets/JavaScript/slider.js"></script>
+    <script src="Assets/JavaScript/brandslider.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
    
@@ -14,14 +16,14 @@
 <body>
 
     <!-- Header Section -->
-<header class="header">
+    <header class="header">
         <div class="container">
             <div class="header-top">
-                <a href="index.html" class="logo text-decoration-none">Jensen Decor</a>
+                <a href="index.html" class="logo">Jensen Decor</a>
                 <div class="header-icons">
                     <i class="fas fa-search"></i>
                     <i class="fas fa-user"></i>
-                </div>            
+                </div>
             </div>
             <nav class="top-nav">
                 <a href="#">Comparison</a>
@@ -31,17 +33,141 @@
             </nav>
             <nav class="nav-wrapper">
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Metal Wall Art</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Wallpapers</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Photo Frame Art</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Mirror Art</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Wall Shelves</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Wall Mounted Animals</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Metal Wall Art</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="subcategories">
+                                    <h4>CATEGORIES</h4>
+                                    <a href="#">Modern</a>
+                                    <a href="#">Abstract</a>
+                                    <a href="#">Nature</a>
+                                    <a href="#">Minimalist</a>
+                                    <a href="#">Geometric</a>
+                                </div>
+                                <div class="sizes">
+                                    <h4>SIZES</h4>
+                                    <p>12" x 16"</p>
+                                    <p>20" x 28"</p>
+                                    <p>28" x 39"</p>
+                                    <p>40" x 55"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Wallpapers</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="subcategories">
+                                    <h4>CATEGORIES</h4>
+                                    <a href="#">Textured</a>
+                                    <a href="#">Floral</a>
+                                    <a href="#">Brick</a>
+                                    <a href="#">Vintage</a>
+                                    <a href="#">Abstract</a>
+                                </div>
+                                <div class="sizes">
+                                    <h4>SIZES</h4>
+                                    <p>Rolls Available</p>
+                                    <p>Custom Size</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Photo Frame Art</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="subcategories">
+                                    <h4>CATEGORIES</h4>
+                                    <a href="#">Portraits</a>
+                                    <a href="#">Landscapes</a>
+                                    <a href="#">Vintage</a>
+                                    <a href="#">Black & White</a>
+                                    <a href="#">Abstract</a>
+                                </div>
+                                <div class="sizes">
+                                    <h4>SIZES</h4>
+                                    <p>Small (A4)</p>
+                                    <p>Medium (A3)</p>
+                                    <p>Large (A2)</p>
+                                    <p>Custom Sizes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Mirror Art</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="subcategories">
+                                    <h4>CATEGORIES</h4>
+                                    <a href="#">Round Mirrors</a>
+                                    <a href="#">Geometric</a>
+                                    <a href="#">Minimalist</a>
+                                    <a href="#">Vintage</a>
+                                    <a href="#">Artistic</a>
+                                </div>
+                                <div class="sizes">
+                                    <h4>SIZES</h4>
+                                    <p>Small</p>
+                                    <p>Medium</p>
+                                    <p>Large</p>
+                                    <p>Custom Sizes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Wall Shelves</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="subcategories">
+                                    <h4>CATEGORIES</h4>
+                                    <a href="#">Floating Shelves</a>
+                                    <a href="#">Corner Shelves</a>
+                                    <a href="#">Geometric</a>
+                                    <a href="#">Minimalist</a>
+                                    <a href="#">Rustic</a>
+                                </div>
+                                <div class="sizes">
+                                    <h4>SIZES</h4>
+                                    <p>Small</p>
+                                    <p>Medium</p>
+                                    <p>Large</p>
+                                    <p>Custom Sizes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Wall Mounted Animals</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="subcategories">
+                                    <h4>CATEGORIES</h4>
+                                    <a href="#">Metal Animal Heads</a>
+                                    <a href="#">Wooden Designs</a>
+                                    <a href="#">Abstract</a>
+                                    <a href="#">3D Sculptures</a>
+                                    <a href="#">Minimalist</a>
+                                </div>
+                                <div class="sizes">
+                                    <h4>SIZES</h4>
+                                    <p>Small</p>
+                                    <p>Medium</p>
+                                    <p>Large</p>
+                                    <p>Custom Sizes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
-</header>
-
+    </header>
+        
     <!-- Hero Section -->
 <section class="hero">
         <div class="hero-content-bottom">
@@ -51,55 +177,56 @@
 </section>
     
 <section class="content-wrapper">
-        <!-- Interactive Navigation -->
-        <section class="interactive-nav">
-            <div class="container">
-                <h2 class="interactive-heading">Premium Framed Décor - Quality & Fast Delivery</h2>
-                <p class="interactive-subtext">Explore our range of elegant and durable framed décor, designed to add style to your space with quick delivery.</p>
-                
-                <div class="nav-container">
-                    <ul class="nav-list">
-                        <li class="interactive-nav-item" data-id="1">
-                            <i class="fas fa-question-circle"></i> Quiz
-                            <span>Find your perfect style</span>
-                        </li>
-                        <li class="interactive-nav-item" data-id="2">
-                            <i class="fas fa-drafting-compass"></i> Prototype
-                            <span>Designed with precision</span>
-                        </li>
-                        <li class="interactive-nav-item" data-id="3">
-                            <i class="fas fa-lightbulb"></i> Savoir-faire
-                            <span>Expert craftsmanship</span>
-                        </li>
-                        <li class="interactive-nav-item" data-id="4">
-                            <i class="fas fa-gem"></i> Quality
-                            <span>Made to last</span>
-                        </li>
-                        <li class="interactive-nav-item" data-id="5">
-                            <i class="fas fa-leaf"></i> Responsible
-                            <span>Eco-friendly production</span>
-                        </li>
-                    </ul>
-                    <div class="underline"></div>
-                </div>
+    <!-- Interactive Navigation -->
+    <section class="interactive-nav">
+        <div class="container">
+            <h2 class="interactive-heading">Discover the Perfect Wall Decor for Your Space</h2>
+            <p class="interactive-subtext">Explore our premium collection of framed wall art, metal designs, and decorative accents to transform your interiors.</p>
+            
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li class="interactive-nav-item" data-id="1">
+                        <i class="fas fa-palette"></i> Style Quiz
+                        <span>Find the perfect decor for your home</span>
+                    </li>
+                    <li class="interactive-nav-item" data-id="2">
+                        <i class="fas fa-ruler-combined"></i> Custom Designs
+                        <span>Personalized wall art tailored for you</span>
+                    </li>
+                    <li class="interactive-nav-item" data-id="3">
+                        <i class="fas fa-brush"></i> Handcrafted Quality
+                        <span>Expertly crafted by skilled artisans</span>
+                    </li>
+                    <li class="interactive-nav-item" data-id="4">
+                        <i class="fas fa-certificate"></i> Premium Materials
+                        <span>High-quality finishes built to last</span>
+                    </li>
+                    <li class="interactive-nav-item" data-id="5">
+                        <i class="fas fa-seedling"></i> Sustainable Decor
+                        <span>Eco-friendly and responsibly sourced</span>
+                    </li>
+                </ul>
+                <div class="underline"></div>
             </div>
-        </section>
+        </div>
+    </section>
+</section>
     
 <!-- Explore Section -->
 <section class="explore-section">
     <div class="explore-container">
         <div class="explore-text">
-            <h2>More to Explore</h2>
-            <p>Discover our latest collections and bestsellers.</p>
+            <h2>Discover More from Jensen Decor</h2>
+            <p>Explore our handpicked collections of premium wall décor and home accents, designed to transform your space with elegance and creativity. Whether you love modern minimalism or timeless classics, we have something special for you.</p>
         </div>
         <div class="slider-wrapper">
             <button class="prev-btn">&#10094;</button>
             <div class="slider-container">
                 <div class="slider">
-                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Category 1"></a><p>Category 1</p></div>
-                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Category 2"></a><p>Category 2</p></div>
-                    <div class="slide"><a href=""><img src="Assets/Images/Paris.jpg" alt="Category 3"></a><p>Category 3</p></div>
-                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Category 4"></a><p>Category 4</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Metal Wall Art"></a><p>Metal Wall Art</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Luxury Wallpapers"></a><p>Luxury Wallpapers</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Paris.jpg" alt="Elegant Photo Frames"></a><p>Elegant Photo Frames</p></div>
+                    <div class="slide"><a href=""><img src="Assets/Images/Miami.jpg" alt="Decorative Wall Mirrors"></a><p>Decorative Wall Mirrors</p></div>
                 </div>
             </div>
             <button class="next-btn">&#10095;</button>
@@ -107,29 +234,28 @@
     </div>
 </section>
 
-
 <!-- Brand Slider Section -->
-<div class="brand-track">
-    <img class="brand" src="Assets/Images/1655979298paypal-logo-png-transparent.png" alt="Brand 1">
-    <img class="brand" src="Assets/Images/1659109767etsy-logo-png.png" alt="Brand 2">
-    <img class="brand" src="Assets/Images/1660059848transparent-cash-app-logo.png" alt="Brand 3">
-    <img class="brand" src="Assets/Images/1685121928zelle-logo.png" alt="Brand 4">
-    <img class="brand" src="Assets/Images/1686206978pinterest-logo-transparent.png" alt="Brand 5">
-    <img class="brand" src="Assets/Images/1688361055amazon-logo-png.png" alt="Brand 6">
+<div class="brand-slider-container">
+    <div class="brand-track">
+        <div class="brand-wrapper">
+            <img class="brand" src="Assets/Images/1655979298paypal-logo-png-transparent.png" alt="Brand 1">
+            <img class="brand" src="Assets/Images/1659109767etsy-logo-png.png" alt="Brand 2">
+            <img class="brand" src="Assets/Images/1660059848transparent-cash-app-logo.png" alt="Brand 3">
+            <img class="brand" src="Assets/Images/1685121928zelle-logo.png" alt="Brand 4">
+            <img class="brand" src="Assets/Images/1686206978pinterest-logo-transparent.png" alt="Brand 5">
+            <img class="brand" src="Assets/Images/1688361055amazon-logo-png.png" alt="Brand 6">
+        </div>
+        <div class="brand-wrapper">
+            <!-- Duplicate images for smooth transition -->
+            <img class="brand" src="Assets/Images/1655979298paypal-logo-png-transparent.png" alt="Brand 1">
+            <img class="brand" src="Assets/Images/1659109767etsy-logo-png.png" alt="Brand 2">
+            <img class="brand" src="Assets/Images/1660059848transparent-cash-app-logo.png" alt="Brand 3">
+            <img class="brand" src="Assets/Images/1685121928zelle-logo.png" alt="Brand 4">
+            <img class="brand" src="Assets/Images/1686206978pinterest-logo-transparent.png" alt="Brand 5">
+            <img class="brand" src="Assets/Images/1688361055amazon-logo-png.png" alt="Brand 6">
+        </div>
+    </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const brandTrack = document.querySelector(".brand-track");
-    const brands = document.querySelectorAll(".brand");
-
-    // Clone each brand image and append it to the track
-    brands.forEach((brand) => {
-        const clone = brand.cloneNode(true);
-        brandTrack.appendChild(clone); // Append the cloned image after the original
-    });
-});
-</script>
 
 
 <!-- info section -->
@@ -146,6 +272,111 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </section>
 
+<!-----------------footer section --------------------->
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3 class="footer-title">Jensen Decor</h3>
+            <p>Bringing you the finest wall decor to elevate your space with elegance and style.</p>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Metal Wall Art</h4>
+            <ul>
+                <li><a href="#">Abstract Metal Art</a></li>
+                <li><a href="#">Geometric & Minimalist Designs</a></li>
+                <li><a href="#">Nature-Inspired </a></li>
+                <li><a href="#">Industrial & Rustic Metal Art</a></li>
+                <li><a href="#">Personalized & Custom Metal Signs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Wallpapers</h4>
+            <ul>
+                <li><a href="#">Peel & Stick Wallpapers</a></li>
+                <li><a href="#">Textured Wallpapers </a></li>
+                <li><a href="#">Floral & Botanical Prints</a></li>
+                <li><a href="#">Geometric & Modern Designs</a></li>
+                <li><a href="#">Kids' Room Wallpapers</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Photo Frame Art</h4>
+            <ul>
+                <li><a href="#">Collage Frames</a></li>
+                <li><a href="#">Single Large Statement Frames</a></li>
+                <li><a href="#">Wooden & Rustic Frames</a></li>
+                <li><a href="#">Minimalist & Metal Frames</a></li>
+                <li><a href="#">Floating Frames</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Mirror Art</h4>
+            <ul>
+                <li><a href="#">Decorative Wall Mirrors</a></li>
+                <li><a href="#">LED & Backlit Mirrors</a></li>
+                <li><a href="#">Geometric & Modern Mirrors</a></li>
+                <li><a href="#">Antique & Vintage Mirrors</a></li>
+                <li><a href="#">Sunburst & Artistic Mirrors</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Wall Shelves</h4>
+            <ul>
+                <li><a href="#">Floating Shelves</a></li>
+                <li><a href="#">Corner Shelves</a></li>
+                <li><a href="#">Hexagonal & Geometric Shelves</a></li>
+                <li><a href="#">Rustic Wooden Shelves</a></li>
+                <li><a href="#">Wall Shelves with Hooks & Storage</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Wall Mounted Animals</h4>
+            <ul>
+                <li><a href="#">Metal Animal Silhouettes</a></li>
+                <li><a href="#">Wooden Carved Animal Heads</a></li>
+                <li><a href="#">3D Faux Taxidermy</a></li>
+                <li><a href="#">Wildlife & Safari-Themed Wall Art</a></li>
+                <li><a href="#">Artistic & Abstract Animal Designs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Community</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">More</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Comparison</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section newsletter">
+            <h4 class="footer-title">Join Our Newsletter</h4>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section social">
+            <h4 class="footer-title">Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Jensen Decor. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

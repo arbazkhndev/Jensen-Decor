@@ -21,19 +21,19 @@
 .header .top-nav a, 
 .header .nav .nav-item .nav-link, 
 .header-icons i {
-    color: white;
+    color: #D6BEA1;
     transition: color 0.3s ease-in-out;
 }
 
 .header:hover {
-    background: white;
+    background: #333;
 }
 
 .header:hover .logo, 
 .header:hover .top-nav a, 
 .header:hover .nav .nav-item .nav-link, 
 .header:hover .header-icons i {
-    color: #333; 
+    color: #D6BEA1; 
 }
 
 .nav .nav-item .nav-link:hover {
@@ -52,7 +52,7 @@
     font-family: 'Cinzel', serif;
     font-size: 34px;
     font-weight: bold;
-    color: #333;
+    color: #D6BEA1;
     text-transform: uppercase;
     margin-bottom: 12px;
 }
@@ -67,7 +67,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    color: #333;
+    color: #D6BEA1;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -76,7 +76,7 @@
 }
 .nav-wrapper {
     width: 100%;
-    border-top: 1px solid #d3d3d3;
+    border-top: 1px solid #D6BEA1;
     padding-top: 20px;
 }
 .nav {
@@ -96,8 +96,9 @@
     text-transform: uppercase;
 }
 .header:hover .nav .nav-item .nav-link {
-    color: #333;
+    color: #D6BEA1;
 }
+
 
 /* --------------------------- Style for the icons --------------------------- */
 .header-icons {
@@ -110,7 +111,7 @@
 
 .header-icons i {
     font-size: 20px;
-    color: white; 
+    color: #D6BEA1; 
     transition: color 0.3s ease;
     cursor: pointer;
 }
@@ -118,6 +119,89 @@
 
 .header-icons i:hover {
     color: #a07b5e;
+}
+
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-icons {
+        position: static;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------------------- Dropdown Menu ------------------ */
+/* Full-Width Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Styling for Subcategories and Sizes */
+.subcategories, .sizes {
+    width: 50%;
+}
+
+.subcategories h4, .sizes h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subcategories a, .sizes p {
+    display: block;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.subcategories a:hover {
+    color: #a07b5e;
+    text-decoration: underline;
 }
 
 
@@ -138,7 +222,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/Assets/Images/Paris.jpg);
+    background-image: url(../Images/Main\ Image.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -153,7 +237,7 @@
     position: absolute;
     bottom: 50px;
     left: 50px;
-    color: white;
+    color: #D6BEA1;
     text-align: left;
 }
 
@@ -167,7 +251,7 @@
 
 .hero-btn {
     font-family: 'Montserrat', sans-serif;
-    background-color: white;
+    background-color: #D6BEA1;
     color: #333;
     padding: 12px 20px;
     font-size: 17px;
@@ -208,7 +292,7 @@
     text-align: center;
     padding-top: 120px;
     padding-bottom: 70px;
-    background-color: #f4f4f4;
+    background-color: #333;
     position: relative;
 }
 
@@ -226,6 +310,17 @@
     position: relative;
 }
 
+.interactive-heading{
+    color: #a07b5e;
+    font-weight: 700;
+}
+
+.interactive-subtext {
+    color: #D6BEA1;
+    padding-top: 15px;
+    padding-bottom: 15px;    
+}
+
 .interactive-nav-item { 
     font-size: 16px;
     font-weight: 500;
@@ -233,21 +328,21 @@
     position: relative;
     padding: 10px 20px;
     text-align: center;
-    color: #333;
+    color: #D6BEA1;
     transition: color 0.3s ease-in-out;
 }
 
 .interactive-nav-item i {
     font-size: 20px;
     display: block;
-    color: #333;
+    color: #D6BEA1;
     transition: color 0.3s ease-in-out;
 }
 
 .interactive-nav-item span {
     display: block;
     font-size: 14px;
-    color: #666;
+    color: #D6BEA1;
     margin-top: 5px;
     transition: color 0.3s ease-in-out;
 }
@@ -295,7 +390,7 @@
 
 .explore-section {
     padding: 80px 0;
-    background-color: #f4f4f4;
+    background-color: #333;
 }
 
 .explore-container {
@@ -311,15 +406,15 @@
 }
 
 .explore-text h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: #333;
+    color: #a07b5e;
 }
 
 .explore-text p {
     font-size: 16px;
-    color: #666;
+    color: #D6BEA1;
     margin-top: 10px;
 }
 
@@ -357,9 +452,10 @@
 
 .slide p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    color: #D6BEA1;
 }
 
 .slider-wrapper button {
@@ -373,21 +469,23 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
 .prev-btn {
-    left: -50px;
+    left: 10px; 
 }
 
 .next-btn {
-    right: -50px;
+    right: 10px;
 }
 
 button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
     .explore-container {
         flex-direction: column;
         text-align: center;
@@ -403,83 +501,80 @@ button:hover {
     }
 
     .slide img {
-        height: 300px;
+        height: 400px; 
     }
 
     .prev-btn, .next-btn {
-        font-size: 18px;
+        font-size: 20px;
         padding: 8px;
     }
 }
 
-/* ------------------------- Brand Section ---------------------------- */
-
-/* Container to hold the brand images and restrict overflow */
-.brand-slider-container {
-    width: 100%;
-    overflow: hidden; /* Hide anything that moves outside the container */
-    background-color: #a07b5e; 
-    padding: 20px 0;
-}
-
-/* Style the brand track */
-.brand-track {
-    display: flex;
-    width: max-content; /* Ensures the track has enough width to contain all images */
-    animation: scroll 20s linear infinite; /* Smooth scrolling */
-}
-
-/* Style for individual brand images */
-.brand {
-    flex: 0 0 auto;
-    margin: 0 15px; /* Space between images */
-}
-
-.brand-track img {
-    width: 80px; /* Set a fixed width for the images */
-    height: 40px;
-    object-fit: contain;
-    filter: brightness(0) invert(0);
-    transition: filter 0.3s ease-in-out;
-}
-
-.brand-track img:hover {
-    filter: brightness(1) invert(0);
-}
-
-/* Keyframe animation for continuous scrolling */
-@keyframes scroll {
-    0% {
-        transform: translateX(0); /* Start at the initial position */
-    }
-    100% {
-        transform: translateX(-100%); /* Move the entire width of the images (including clones) */
-    }
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .brand-track img {
-        width: 60px; /* Adjust image size for tablet */
-        height: 30px;
+    .slide img {
+        height: 300px; 
     }
 
-    .brand-track {
-        padding: 10px 0;
-    }
-
-    .brand {
-        margin: 0 10px; /* Less margin on mobile */
+    .prev-btn, .next-btn {
+        font-size: 18px;
+        padding: 6px;
     }
 }
 
 @media (max-width: 480px) {
-    .brand-track img {
-        width: 50px; /* Even smaller images for small screens */
-        height: 25px;
+    .slide img {
+        height: 250px; 
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 16px;
+        padding: 5px;
     }
 }
 
+/* ------------------------- Brand Section ---------------------------- */
+.brand-slider-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #a07b5e;
+    padding: 20px 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+.brand-track {
+    display: flex;
+    width: 200%; 
+    animation: scroll 25s linear infinite;
+}
+
+.brand-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.brand {
+    flex: 0 0 auto;
+    width: 90px; 
+    height: 45px;
+    margin: 0 32px;
+    object-fit: contain;
+    filter: brightness(0);
+    transition: filter 0.3s ease-in-out;
+}
+
+.brand:hover {
+    filter: brightness(1);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 /* ----------------------- info section ------------------ */
 
@@ -536,4 +631,112 @@ button:hover {
     max-width: 500px;
     height: auto;
     border-radius: 10px;
+}
+
+/* ---------------------- footer section ----------------- */
+.site-footer {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 50px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 215px;
+    margin-bottom: 5px;
+}
+
+.footer-title {
+    background: #a07b5e;
+    color: black;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    color: #a07b5e;
+}
+
+.footer-bottom {
+    text-align: center;
+    background: black;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #a07b5e;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.newsletter input {
+    margin-bottom: 10px;
+    padding-right: 50px;
+}
+
+.newsletter button {
+    background-color: #a07b5e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #8a624a;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.social-icons i {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+    color: #a07b5e;
 }
