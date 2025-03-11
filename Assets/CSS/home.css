@@ -23,6 +23,7 @@
 .header-icons i {
     color: #D6BEA1;
     transition: color 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .header:hover {
@@ -153,55 +154,44 @@
 }
 
 /* ---------------------- Dropdown Menu ------------------ */
-/* Full-Width Dropdown */
+/* Dropdown Styling */
 .dropdown-menu {
-    display: none;
     position: absolute;
-    top: 100%;
+    top: 200px; /* Adjust based on header height */
     left: 0;
     width: 100%;
     background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    padding: 20px;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-/* Dropdown Content */
+/* Inner content layout */
 .dropdown-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    max-width: 1200px;
 }
 
-/* Styling for Subcategories and Sizes */
-.subcategories, .sizes {
-    width: 50%;
+/* Columns for categories and sizes */
+.category-column, .size-column {
+    flex: 1;
+    padding: 10px;
 }
 
-.subcategories h4, .sizes h4 {
-    font-size: 14px;
+/* Styling for category titles */
+.category-title, .size-title {
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.subcategories a, .sizes p {
+/* Show dropdown when hovering */
+.nav-wrapper:hover ~ .dropdown-menu,
+.dropdown-menu:hover {
     display: block;
-    font-size: 14px;
-    color: black;
-    text-decoration: none;
-    margin-bottom: 5px;
-}
-
-.subcategories a:hover {
-    color: #a07b5e;
-    text-decoration: underline;
 }
 
 

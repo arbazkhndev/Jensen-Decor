@@ -33,141 +33,31 @@
             </nav>
             <nav class="nav-wrapper">
                 <ul class="nav">
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Metal Wall Art</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <div class="subcategories">
-                                    <h4>CATEGORIES</h4>
-                                    <a href="#">Modern</a>
-                                    <a href="#">Abstract</a>
-                                    <a href="#">Nature</a>
-                                    <a href="#">Minimalist</a>
-                                    <a href="#">Geometric</a>
-                                </div>
-                                <div class="sizes">
-                                    <h4>SIZES</h4>
-                                    <p>12" x 16"</p>
-                                    <p>20" x 28"</p>
-                                    <p>28" x 39"</p>
-                                    <p>40" x 55"</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Wallpapers</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <div class="subcategories">
-                                    <h4>CATEGORIES</h4>
-                                    <a href="#">Textured</a>
-                                    <a href="#">Floral</a>
-                                    <a href="#">Brick</a>
-                                    <a href="#">Vintage</a>
-                                    <a href="#">Abstract</a>
-                                </div>
-                                <div class="sizes">
-                                    <h4>SIZES</h4>
-                                    <p>Rolls Available</p>
-                                    <p>Custom Size</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Photo Frame Art</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <div class="subcategories">
-                                    <h4>CATEGORIES</h4>
-                                    <a href="#">Portraits</a>
-                                    <a href="#">Landscapes</a>
-                                    <a href="#">Vintage</a>
-                                    <a href="#">Black & White</a>
-                                    <a href="#">Abstract</a>
-                                </div>
-                                <div class="sizes">
-                                    <h4>SIZES</h4>
-                                    <p>Small (A4)</p>
-                                    <p>Medium (A3)</p>
-                                    <p>Large (A2)</p>
-                                    <p>Custom Sizes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Mirror Art</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <div class="subcategories">
-                                    <h4>CATEGORIES</h4>
-                                    <a href="#">Round Mirrors</a>
-                                    <a href="#">Geometric</a>
-                                    <a href="#">Minimalist</a>
-                                    <a href="#">Vintage</a>
-                                    <a href="#">Artistic</a>
-                                </div>
-                                <div class="sizes">
-                                    <h4>SIZES</h4>
-                                    <p>Small</p>
-                                    <p>Medium</p>
-                                    <p>Large</p>
-                                    <p>Custom Sizes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Wall Shelves</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <div class="subcategories">
-                                    <h4>CATEGORIES</h4>
-                                    <a href="#">Floating Shelves</a>
-                                    <a href="#">Corner Shelves</a>
-                                    <a href="#">Geometric</a>
-                                    <a href="#">Minimalist</a>
-                                    <a href="#">Rustic</a>
-                                </div>
-                                <div class="sizes">
-                                    <h4>SIZES</h4>
-                                    <p>Small</p>
-                                    <p>Medium</p>
-                                    <p>Large</p>
-                                    <p>Custom Sizes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Wall Mounted Animals</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-content">
-                                <div class="subcategories">
-                                    <h4>CATEGORIES</h4>
-                                    <a href="#">Metal Animal Heads</a>
-                                    <a href="#">Wooden Designs</a>
-                                    <a href="#">Abstract</a>
-                                    <a href="#">3D Sculptures</a>
-                                    <a href="#">Minimalist</a>
-                                </div>
-                                <div class="sizes">
-                                    <h4>SIZES</h4>
-                                    <p>Small</p>
-                                    <p>Medium</p>
-                                    <p>Large</p>
-                                    <p>Custom Sizes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <li class="nav-item" data-category="metal-wall-art"><a href="#" class="nav-link">Metal Wall Art</a></li>
+                    <li class="nav-item" data-category="wallpapers"><a href="#" class="nav-link">Wallpapers</a></li>
+                    <li class="nav-item" data-category="photo-frame-art"><a href="#" class="nav-link">Photo Frame Art</a></li>
+                    <li class="nav-item" data-category="mirror-art"><a href="#" class="nav-link">Mirror Art</a></li>
+                    <li class="nav-item" data-category="wall-shelves"><a href="#" class="nav-link">Wall Shelves</a></li>
+                    <li class="nav-item" data-category="wall-mounted-animals"><a href="#" class="nav-link">Wall Mounted Animals</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-        
+    
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu">
+        <div class="dropdown-content" id="dropdown-content">
+            <div class="category-column">
+                <div class="category-title">CATEGORIES</div>
+                <div id="category-list"></div>
+            </div>
+            <div class="size-column">
+                <div class="size-title">SIZES</div>
+                <div id="size-list"></div>
+            </div>
+        </div>
+    </div>
+                    
     <!-- Hero Section -->
 <section class="hero">
         <div class="hero-content-bottom">
