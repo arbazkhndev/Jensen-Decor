@@ -154,45 +154,67 @@
 }
 
 /* ---------------------- Dropdown Menu ------------------ */
-/* Dropdown Styling */
 .dropdown-menu {
     position: absolute;
-    top: 200px; /* Adjust based on header height */
-    left: 0;
-    width: 100%;
-    background: white;
+    top: 98%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw !important;
+    background-color: #333 !important;
     display: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
     padding: 20px;
+    border-radius: 0 !important;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Inner content layout */
-.dropdown-content {
+  .dropdown-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-
-/* Columns for categories and sizes */
-.category-column, .size-column {
+  }
+  
+  .category-column, .size-column {
     flex: 1;
     padding: 10px;
-}
-
-/* Styling for category titles */
-.category-title, .size-title {
+  }
+  
+  .category-title, .size-title {
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-/* Show dropdown when hovering */
-.nav-wrapper:hover ~ .dropdown-menu,
-.dropdown-menu:hover {
+    color: #a07b5e; 
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .category-column div,
+  .size-column div {
+    font-size: 14px;
+    color: #D6BEA1;  
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .category-column div:hover,
+  .size-column div:hover {
+    color: #a07b5e; 
+  }
+  
+  .header:hover .dropdown-menu,
+  .dropdown-menu:hover {
     display: block;
-}
+  }
+
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+      top: 525px; 
+    }
+  }
+  
 
 
 /* -------------------- Hero Section ------------------------ */
