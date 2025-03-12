@@ -18,10 +18,10 @@ body {
     transition: 0.5s ease-in-out;
 }
 .left {
-    background: url(../Images/Miami.jpg) center/cover no-repeat;
+    background: url(../Images/home.jpg) center/cover no-repeat;
 }
 .right {
-    background: url(../Images/Paris.jpg) center/cover no-repeat;
+    background: url(../Images/office.jpg) center/cover no-repeat;
 }
 .overlay {
     position: absolute;
@@ -38,16 +38,17 @@ body {
 }
 h1 {
     font-size: 4.5rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .btn {
     margin-top: 20px;
     padding: 10px 25px;
-    background: #8B5E3C;
-    color: #FFFFFF;
+    background: #d6bea1;
+    color: #333;
     border: none;
     cursor: pointer;
-    font-family: 'Gloock', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+		font-weight: 600;
     font-size: 1.2rem;
     transition: 0.3s;
     border-radius: 9px;
@@ -55,7 +56,8 @@ h1 {
     display: inline-block;
 }
 .btn:hover {
-    background: #D4A373;
+    background: #a07b5e;
+		color: white;
 }
 .section:hover {
     flex: 1.2;
