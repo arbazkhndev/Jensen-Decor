@@ -5,38 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Assets/CSS/abstractmetalart.css">
-    <style>
-        #hero-section {
-            position: relative;
-            width: 100%;
-            height: 400px; 
-            background-image: url('Assets/Item-Image/HERO\ IMG.webp'); 
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #hero-section h1 {
-            font-size: 3rem; 
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); 
-            padding: 20px;
-            border-radius: 10px;
-        }
-    </style>
+    <script src="Assets/JavaScript/dropdown.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <div id="hero-section">
-        <h1></h1>
-    </div>
-     
-    <h1 style="color: #d6bea1; text-align: center;margin-top: 10PX;
-    font-weight: bold; font-size: 50PX;">METAL WALL ARTS</h1>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+          <div class="header-top">
+            <a href="index.html" class="logo">Jensen Decor</a>
+            <div class="header-icons">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <nav class="top-nav">
+            <a href="#">Comparison</a>
+            <a href="#">Community</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+          </nav>
+          <nav class="nav-wrapper">
+            <ul class="nav">
+              <li class="nav-item" data-category="metal-wall-art">
+                <a href="#" class="nav-link">Metal Wall Art</a>
+              </li>
+              <li class="nav-item" data-category="wallpapers">
+                <a href="#" class="nav-link">Wallpapers</a>
+              </li>
+              <li class="nav-item" data-category="photo-frame-art">
+                <a href="#" class="nav-link">Photo Frame Art</a>
+              </li>
+              <li class="nav-item" data-category="mirror-art">
+                <a href="#" class="nav-link">Mirror Art</a>
+              </li>
+              <li class="nav-item" data-category="wall-shelves">
+                <a href="#" class="nav-link">Wall Shelves</a>
+              </li>
+              <li class="nav-item" data-category="wall-mounted-animals">
+                <a href="#" class="nav-link">Wall Mounted Animals</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Dropdown Menu inside the header so that it remains visible -->
+          <div class="dropdown-menu">
+            <div class="dropdown-content" id="dropdown-content">
+              <div class="category-column">
+                <div class="category-title">CATEGORIES</div>
+                <div id="category-list"></div>
+              </div>
+              <div class="size-column">
+                <div class="size-title">SIZES</div>
+                <div id="size-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+                    
+    <!-- Hero Section -->
+<section class="hero">
+        <div class="hero-content-bottom">
+            <p class="hero-text">Limited Edition Collections</p>
+            <button class="hero-btn">Discover</button>
+        </div>
+</section>
 
     <!-- METAL WALL ART SECTION -->
     <div id="card-area">
