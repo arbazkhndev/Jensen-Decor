@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const categoryData = {
     "metal-wall-art": {
       subcategories: [
-				{ name: "Abstract Metal Art", url: "index.html" },
+				{ name: "Abstract Metal Art", url: "abstractmetalart.html" },
         { name: "Geometric & Minimalist Designs", url: "metal-abstract.html" },
         {
           name: "Nature-Inspired (Trees, Leaves, Flowers)",
