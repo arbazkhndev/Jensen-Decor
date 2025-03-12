@@ -156,7 +156,7 @@
 /* ---------------------- Dropdown Menu ------------------ */
 .dropdown-menu {
     position: absolute;
-    top: 98%; 
+    top: 97%;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw !important;
@@ -166,7 +166,11 @@
     z-index: 999;
     padding: 20px;
     border-radius: 0 !important;
-    transition: opacity 0.3s ease-in-out;
+    
+    /* Matching the transition speed with header */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
   .dropdown-content {
@@ -176,6 +180,20 @@
     justify-content: space-between;
   }
   
+	.category-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+}
+
+.category-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
   .category-column, .size-column {
     flex: 1;
     padding: 10px;
@@ -189,25 +207,28 @@
     text-transform: uppercase;
   }
   
-  .category-column div,
-  .size-column div {
+/* Smooth Category Text Transition */
+.category-column div,
+.size-column div {
     font-size: 14px;
     color: #D6BEA1;  
     margin-bottom: 5px;
     cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .category-column div:hover,
-  .size-column div:hover {
-    color: #a07b5e; 
-  }
-  
-  .header:hover .dropdown-menu,
-  .dropdown-menu:hover {
-    display: block;
-  }
+    transition: color 0.3s ease-in-out; /* Smooth color change */
+}
 
+.category-column div:hover,
+.size-column div:hover {
+    color: #a07b5e; /* Light brown on hover */
+}
+
+.header:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
 
 @media (max-width: 768px) {
     .dropdown-menu {
@@ -592,7 +613,7 @@ button:hover {
 
 .info-section {
     width: 100%;
-    background-color: #f5eee6; 
+    background-color: #333; 
     padding: 60px 0;
 }
 
@@ -612,21 +633,21 @@ button:hover {
 
 .info-text h2 {
     font-size: 28px;
-    color: #3d2b1f; 
+    color: #a07b5e; 
     margin-bottom: 15px;
 }
 
 .info-text p {
     font-size: 16px;
-    color: #6a4f3a;
+    color: #D6BEA1;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
 .info-btn {
     display: inline-block;
-    background-color: #3d2b1f;
-    color: #fff;
+    background-color: #D6BEA1;
+    color: #333;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -635,7 +656,8 @@ button:hover {
 }
 
 .info-btn:hover {
-    background-color: #2a1d13;
+    background-color: #a07b5e;
+		color: white;
 }
 
 .info-image img {
@@ -671,13 +693,13 @@ button:hover {
 }
 
 .footer-title {
-    background: #a07b5e;
-    color: black;
-    padding: 5px 10px;
-    display: inline-block;
+    color: #a07b5e; 
+    padding: 5px 0;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    display: block;
+    background: none;
 }
 
 
@@ -697,7 +719,7 @@ button:hover {
 }
 
 .footer-section ul li a:hover {
-    color: #a07b5e;
+    color: #D6BEA1;
 }
 
 .footer-bottom {
@@ -725,8 +747,9 @@ button:hover {
 }
 
 .newsletter button {
-    background-color: #a07b5e;
-    color: white;
+    background-color: #D6BEA1;
+    color: #333;
+		font-weight: 800;
     border: none;
     padding: 8px 15px;
     cursor: pointer;
@@ -734,7 +757,8 @@ button:hover {
 }
 
 .newsletter button:hover {
-    background-color: #8a624a;
+    background-color: #a07b5e;
+		color: white;
 }
 
 .social-icons {
