@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: poppins;
     box-sizing: border-box;
 }
 body{
@@ -24,6 +23,7 @@ body{
 }
 #card-area{
     padding: 50px 0;
+    background-color: #333;
 }
 .box-area{
     display: grid;
@@ -35,7 +35,7 @@ body{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 3px 3px 6px #D6BEA1;
 }
 .box img{
     width: 100%;
@@ -69,20 +69,24 @@ body{
     margin-top: 80px;
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 2px;
 }
 
 .overlay p{
     color: #D6BEA1;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .overlay a{
     margin-top: 30px;
     color: #333;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     background:#D6BEA1;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 50px;
     text-align: center;
     padding: 5px 15px;
@@ -102,8 +106,10 @@ body{
 }
 
 
+/* --------------------------- Header --------------------------- */
+
 .header {
-    background: transparent;
+    background: #333;
     position: absolute;
     width: 100%;
     top: 0;
@@ -330,81 +336,180 @@ body{
     }
   }
 
-  /* -------------------- Hero Section ------------------------ */
-.hero {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+/* --------------------------- Banner --------------------------- */
+.banner {
+    width: 100%;
+    height: 400px; 
+    margin-top: 195px;
+    background: url('../Images/1subcat.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../Images/Main\ Image.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: transform 0.8s ease-in-out;
-}
-
-.hero:hover::before {
-    transform: scale(1.1); 
-}
-
-.hero-content-bottom {
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
+.banner-text {
     color: #D6BEA1;
-    text-align: left;
-}
-
-.hero-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.hero-btn {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #D6BEA1;
-    color: #333;
-    padding: 12px 20px;
-    font-size: 17px;
-    font-weight: bold;
-    border: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 10px 20px;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    max-width: 90%;
 }
 
-.hero-btn:hover {
-    background-color: #a07b5e;
-    color: white;
-    transform: scale(1.05);
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .banner {
+        height: 300px; /* Adjust for tablets */
+        margin-top: 235px;
+    }
+
+    .banner-text {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero-content-bottom {
-        bottom: 30px;
-        left: 20px;
+    .banner {
+        height: 250px; /* Adjust for smaller devices */
+        margin-top: 525px;
     }
 
-    .hero-text {
-        font-size: 16px;
+    .banner-text {
+        font-size: 2rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 200px; /* Adjust for mobile */
+        margin-top: 525px;
     }
 
-    .hero-btn {
-        font-size: 14px;
-        padding: 10px 16px;
+    .banner-text {
+        font-size: 1.5rem;
+        padding: 5px 10px;
     }
+}
+
+/* ---------------------- footer section ----------------- */
+.site-footer {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 50px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 215px;
+    margin-bottom: 5px;
+}
+
+.footer-title {
+    color: #a07b5e; 
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    background: none;
+}
+
+.footer-section p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    color: #D6BEA1;
+}
+
+.footer-bottom {
+    text-align: center;
+    background: black;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #a07b5e;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.newsletter input {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 50px;
+}
+
+.newsletter button {
+    background-color: #D6BEA1;
+    color: #333;
+	font-weight: 800;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #a07b5e;
+		color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.social-icons i {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+    color: #a07b5e;
 }
