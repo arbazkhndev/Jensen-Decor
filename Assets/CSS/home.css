@@ -161,7 +161,7 @@
     transform: translateX(-50%);
     width: 100vw !important;
     background-color: #333 !important;
-    display: none; /* Hidden initially */
+    display: none; 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -204,19 +204,19 @@
     text-transform: uppercase;
   }
   
-/* Smooth Category Text Transition */
+
 .category-column div,
 .size-column div {
     font-size: 14px;
     color: #D6BEA1;  
     margin-bottom: 5px;
     cursor: pointer;
-    transition: color 0.3s ease-in-out; /* Smooth color change */
+    transition: color 0.3s ease-in-out;
 }
 
 .category-column div:hover,
 .size-column div:hover {
-    color: #a07b5e; /* Light brown on hover */
+    color: #a07b5e; 
 }
 
 .header:hover .dropdown-menu,

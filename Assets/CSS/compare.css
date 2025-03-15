@@ -1,4 +1,8 @@
+body{
+    background-color: #333;
+}
 /* --------------------------- Header --------------------------- */
+
 
 .header {
     background: #333;
@@ -207,12 +211,12 @@
     color: #D6BEA1;  
     margin-bottom: 5px;
     cursor: pointer;
-    transition: color 0.3s ease-in-out; /* Smooth color change */
+    transition: color 0.3s ease-in-out; 
 }
 
 .category-column div:hover,
 .size-column div:hover {
-    color: #a07b5e; /* Light brown on hover */
+    color: #a07b5e; 
 }
 
 .header:hover .dropdown-menu,
@@ -231,7 +235,8 @@
 
 /* ------------ rest of the page ------------ */
 .containers{
-    margin-top: 250px;
+    padding-top: 400px;
+    padding-bottom: 700px;
     width: 100%;
     height: 600px;
     background-color: #333;
@@ -321,6 +326,11 @@
     padding-left: 10px;
     
 }
+
+.col-md-6{
+    padding-top: 20px;
+}
+
 /*------------------Slider-Start--------------------------*/
 .img-dime:hover{
     opacity: 0.7;
@@ -351,7 +361,6 @@
 .product-1
 {
     padding: 10px 0px;
-    /* border: 1px solid #000; */
     background: rgb(226,193,255);
     background: linear-gradient(322deg, rgba(226,193,255,1) 0%, rgba(233,135,255,1) 100%);
     border-radius: 20px;
@@ -475,4 +484,201 @@
 
 .social-icons i:hover {
     color: #a07b5e;
+}
+
+/* --------------------------- Random thing --------------------------- */
+body{
+    background-color: rgb(255, 255, 255);
+}
+.logo1{
+   font-family: cursive;font-size: 25px; font-weight: 600
+}
+.logo2{
+  font-family: sans-serif;font-size: 18px; font-weight: 200
+}
+#mainlogo:hover{
+     color: white;
+}
+.navbar{
+    background-color: #04034b;
+}
+.navbar .navbar-brand{
+    color: white;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    color: white;
+    font-family: sans-serif;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: #04034b;
+    background-color: white;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+.navbar .navbar-nav .nav-item .nav-link:active{
+    color: #04034b;
+    background-color: white;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color:#04034b ;
+    margin-top: 0; 
+ }
+ .dropdown:hover .dropdown-menu .dropdown-item {
+     color: white;
+     font-family: sans-serif;
+ }
+ .dropdown .dropdown-menu .dropdown-item:hover {
+    color: #04034b;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+/* ----------------------Footer CSS -Start------------------------------*/
+footer
+{
+  background-color:#04034b;
+  font-size:15px;
+  line-height:24px;
+  
+}
+
+.copyright-text{
+    color:white;
+}
+
+.icon{
+    color:white;
+}
+.icon .me-4 .fab {
+    font-size: 25px;
+    width: 50px;
+}
+/* ----------------------Footer CSS -end------------------------------*/
+.cont-size
+{
+    height: 440px;
+}
+.cont{
+    padding-top: 50px;
+}
+.cont-h{
+     font-family: serif;
+     font-weight: bold;
+     color: black;
+}
+.cont-p{
+    font-family: serif;
+    color: black;
+    font-size: 22px;
+
+}
+.btn {
+    color: white ;
+    background-color:#04034b ;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+.btn:hover{
+    color: #04034b  ;
+    font-weight: 500;
+    background-color:white;
+    font-family: sans-serif;
+    border-radius: 20px;
+    
+}
+.btn-c:hover{
+    color:#04034b;
+    background-color: white;
+    font-weight: 500;
+    font-family: sans-serif;
+    border-radius: 20px;
+    
+}
+.cont-i{
+    width: 102.3%;
+  height: 90%;
+}
+.cont-ii{
+    padding-top: 20px;
+    width: 100%;
+  height: 90%;
+}
+
+.card img {
+    background-color: dodgerblue;
+}
+
+.cont-2 h1{
+    color: #04034b;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+ }
+.cont-2 h3{
+    color: dodgerblue;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+ }
+.cont-2 p{
+    color: black;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    
+ }
+.cont-2 ul
+{
+    list-style-type: "💡"
+    
+}
+.cont-2 ul li h4
+{
+    text-transform: lowercase;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    
+}
+/*------------------Slider-Start--------------------------*/
+.img-dime:hover{
+    opacity: 0.7;
+}
+.tedit{
+    font-family: sans-serif;
+    
+}
+.hedit{
+    border-top: 2px solid red;
+}
+.ula{
+    list-style-type: none;
+    font-family: cursive;
+}
+    
+/*------------------Slider-End--------------------------*/
+/*---------------------Compare page ---------------------------------------------------*/
+.compare_Image_Box{
+    width: 320px;
+    height: 160px;
+    border: 2px solid #04034b;
+    float: left;
+    text-align: center;
+    background: rgba(0,142,227,.1);
+    border-radius: 4px;
+    box-shadow: 0 3px 0 rgb(0 143 229), 0 -1px #fff inset;
+}
+.product-1
+{
+    padding: 10px 0px;
+    /* border: 1px solid #000; */
+    background: rgb(226,193,255);
+    background: linear-gradient(322deg, rgba(226,193,255,1) 0%, rgba(233,135,255,1) 100%);
+    border-radius: 20px;
+    padding: 10px 20px;
+    opacity: 0;
+    transition-duration: 0.5s;
 }
