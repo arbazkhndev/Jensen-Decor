@@ -11,51 +11,51 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Geometric & Minimalist Designs", url: "geomatricwallart.html" },
         {
           name: "Nature-Inspired (Trees, Leaves, Flowers)",
-          url: "metal-nature.html",
+          url: "nature-inspired.html",
         },
       ],
       sizes: ['12" x 16"', '20" x 28"', '28" x 39"'],
     },
     wallpapers: {
       subcategories: [
-        { name: "Peel & Stick Wallpapers", url: "wallpaper-textured.html" },
+        { name: "Peel & Stick Wallpapers", url: "peel&stickwallpapers.html" },
         {
           name: "Textured Wallpapers (Brick, Wood, Marble, etc.)",
-          url: "wallpaper-floral.html",
+          url: "texturedwallpapers.html",
         },
-        { name: "Floral & Botanical Prints", url: "wallpaper-patterned.html" },
+        { name: "Floral & Botanical Prints", url: "floral&botanicalprints.html" },
       ],
       sizes: ['10" x 14"', '18" x 24"', '24" x 36"'],
     },
     "photo-frame-art": {
       subcategories: [
-        { name: "Collage Frames", url: "frame-classic.html" },
-        { name: "Single Large Statement Frames", url: "frame-collage.html" },
-        { name: "Wooden & Rustic Frames", url: "frame-wooden.html" },
+        { name: "Collage Frames", url: "collageframes.html" },
+        { name: "Single Large Statement Frames", url: "singlelargestatementframes.html" },
+        { name: "Wooden & Rustic Frames", url: "wooden&rusticframes.html" },
       ],
       sizes: ['8" x 10"', '11" x 14"', '16" x 20"'],
     },
     "mirror-art": {
       subcategories: [
-        { name: "Decorative Wall Mirrors", url: "mirror-wall.html" },
-        { name: "LED & Backlit Mirrors", url: "mirror-decorative.html" },
-        { name: "Geometric & Modern Mirrors", url: "mirror-led.html" },
+        { name: "Decorative Wall Mirrors", url: "decorativewallmirrors.html" },
+        { name: "LED & Backlit Mirrors", url: "lED&backlitmirrors.html" },
+        { name: "Geometric & Modern Mirrors", url: "geometric&modernmirrors.html" },
       ],
       sizes: ["Small", "Medium", "Large"],
     },
     "wall-shelves": {
       subcategories: [
-        { name: "Floating Shelves", url: "shelves-floating.html" },
-        { name: "Corner Shelves", url: "shelves-corner.html" },
-        { name: "Hexagonal & Geometric Shelves", url: "shelves-books.html" },
+        { name: "Floating Shelves", url: "floatingshelves.html" },
+        { name: "Corner Shelves", url: "cornershelves.html" },
+        { name: "Hexagonal & Geometric Shelves", url: "hexagonal&geometricshelves.html" },
       ],
       sizes: ["30cm", "50cm", "75cm"],
     },
     "wall-mounted-animals": {
       subcategories: [
-        { name: "Metal Animal Silhouettes", url: "animals-metal.html" },
-        { name: "Wooden Carved Animal Heads", url: "animals-wooden.html" },
-        { name: "3D Faux Taxidermy", url: "animals-abstract.html" },
+        { name: "Metal Animal Silhouettes", url: "metalanimalsilhouettes.html" },
+        { name: "Wooden Carved Animal Heads", url: "woodencarvedanimalheads.html" },
+        { name: "3D Faux Taxidermy", url: "3Dfauxtaxidermy.html" },
       ],
       sizes: ["Small", "Medium", "Large"],
     },

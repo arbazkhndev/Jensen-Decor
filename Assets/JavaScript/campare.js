@@ -7,8 +7,8 @@ function selectProduct1()
     var product = document.getElementById("first").value;
     if(product=="val1")
     {
-        document.getElementById("image").src="images/chnag1.png";
-        document.getElementById("model").innerHTML="Model : DC Inverter Inventage 1.5 Ton";
+        document.getElementById("image").src="Assets/Item-Image/img11.webp";
+        document.getElementById("model").innerHTML="Model : magic 1";
         document.getElementById("features").innerHTML="Features: Air Vane Technology | Auto Swing | Power Mode<br>";
         document.getElementById("spec").innerHTML="Specifications:  Cooling (Btu/H) : 53000 | Power Input (W) : 4800 | EER : 5.5-3.2<br>";
         
