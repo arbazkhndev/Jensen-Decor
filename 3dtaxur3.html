@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Assets/JavaScript/dropdown.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f;
+            transition: 0.3s ease-in-out;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 20px auto;
+            margin-top: 250px;
+        }
+        .thumbnail-images {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+        .thumbnail-images img {
+            width: 65px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .thumbnail-images img:hover {
+            border: 2px solid #a07b5e;
+        }
+        .product-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+        .product-details {
+            margin-left: 20px;
+            flex-grow: 1;
+        }
+        .product-title {
+            font-size: 22px;
+            color: #a07b5e;
+            font-weight: bold;
+        }
+        .rating {
+            color: #D6BEA1;
+            font-size: 20px;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #D6BEA1;
+            margin: 10px 0;
+        }
+        .product-sizes button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            background: #D6BEA1;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .product-sizes button:hover,
+        .product-sizes button.active {
+            background: #a07b5e;
+            color: white;
+        }
+        .add-to-cart {
+            background: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .add-to-cart:hover {
+            background: #a07b5e;
+            color: white;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #ddd;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .tab:hover, .tab.active {
+            background: #a07b5e;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #333;
+            color: #D6BEA1;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            margin-bottom: 80px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .delivery-info {
+            color: #D6BEA1;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 525px;
+            }
+            .product-details {
+                margin-left: 0;
+                text-align: center;
+            }
+            .thumbnail-images {
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            .thumbnail-images img {
+                margin: 0 5px;
+            }
+        }
+        /* ---------------------- footer section ----------------- */
+        .site-footer {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 50px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 215px;
+            margin-bottom: 5px;
+        }
+
+        .footer-title {
+            color: #a07b5e; 
+            padding: 5px 0;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+            background: none;
+        }
+
+        .footer-section p {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer-section ul li a:hover {
+            color: #D6BEA1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            background: black;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .footer-bottom a {
+            color: #a07b5e;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .newsletter form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .newsletter input {
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            padding-right: 50px;
+        }
+
+        .newsletter button {
+            background-color: #D6BEA1;
+            color: #333;
+            font-weight: 800;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter button:hover {
+            background-color: #a07b5e;
+                color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+        .social-icons i {
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons i:hover {
+            color: #a07b5e;
+        }   
+
+        /* --------------------------- Header --------------------------- */
+
+.header {
+    background: #333;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.header .logo, 
+.header .top-nav a, 
+.header .nav .nav-item .nav-link, 
+.header-icons i {
+    color: #D6BEA1;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.header:hover {
+    background: #333;
+}
+
+.header:hover .logo, 
+.header:hover .top-nav a, 
+.header:hover .nav .nav-item .nav-link, 
+.header:hover .header-icons i {
+    color: #D6BEA1; 
+}
+
+.nav .nav-item .nav-link:hover {
+    color: #a07b5e !important; 
+}
+
+.header .logo:hover, .top-nav a:hover {
+    color: #a07b5e !important; 
+}
+
+.header-icons i:hover {
+    color: #a07b5e !important;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: #D6BEA1;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.top-nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #D6BEA1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.top-nav a:hover {
+    color: #a07b5e;
+}
+.nav-wrapper {
+    width: 100%;
+    border-top: 1px solid #D6BEA1;
+    padding-top: 20px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav .nav-item .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+.header:hover .nav .nav-item .nav-link {
+    color: #D6BEA1;
+}
+
+
+/* --------------------------- Style for the icons --------------------------- */
+.header-icons {
+    position: absolute;
+    right: 80px; 
+    top: 37px;
+    display: flex;
+    gap: 25px;
+}
+
+.header-icons i {
+    font-size: 20px;
+    color: #D6BEA1; 
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.header-icons i:hover {
+    color: #a07b5e;
+}
+
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-icons {
+        position: static;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------------------- Dropdown Menu ------------------ */
+.dropdown-menu {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw !important;
+    background-color: #333 !important;
+    display: none; /* Hidden initially */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999;
+    padding: 20px;
+    border-radius: 0 !important;
+}
+
+  .dropdown-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+	.category-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+}
+
+.category-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+  .category-column, .size-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .category-title, .size-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #a07b5e; 
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+.category-column div,
+.size-column div {
+    font-size: 14px;
+    color: #D6BEA1;  
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out; 
+}
+
+.category-column div:hover,
+.size-column div:hover {
+    color: #a07b5e; 
+}
+
+.header:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+      top: 525px; 
+    }
+  }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+          <div class="header-top">
+            <a href="index.html" class="logo">Jensen Decor</a>
+            <div class="header-icons">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <nav class="top-nav">
+            <a href="compare.html">Comparison</a>
+            <a href="#">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+          </nav>
+          <nav class="nav-wrapper">
+            <ul class="nav">
+              <li class="nav-item" data-category="metal-wall-art">
+                <a href="#" class="nav-link">Metal Wall Art</a>
+              </li>
+              <li class="nav-item" data-category="wallpapers">
+                <a href="#" class="nav-link">Wallpapers</a>
+              </li>
+              <li class="nav-item" data-category="photo-frame-art">
+                <a href="#" class="nav-link">Photo Frame Art</a>
+              </li>
+              <li class="nav-item" data-category="mirror-art">
+                <a href="#" class="nav-link">Mirror Art</a>
+              </li>
+              <li class="nav-item" data-category="wall-shelves">
+                <a href="#" class="nav-link">Wall Shelves</a>
+              </li>
+              <li class="nav-item" data-category="wall-mounted-animals">
+                <a href="#" class="nav-link">Wall Mounted Animals</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Dropdown Menu inside the header so that it remains visible -->
+          <div class="dropdown-menu">
+            <div class="dropdown-content" id="dropdown-content">
+              <div class="category-column">
+                <div class="category-title">CATEGORIES</div>
+                <div id="category-list"></div>
+              </div>
+              <div class="size-column">
+                <div class="size-title">SIZES</div>
+                <div id="size-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+
+    <div class="product-container">
+        <div class="thumbnail-images">
+            <img src="Assets/Item-Image/mirror/3dtaux3.webp" onclick="changeImage('Assets/Item-Image/mirror/3dtaux3.webp')">
+            <img src="Assets/Item-Image/mirror/3dtaux3(3).webp" onclick="changeImage('Assets/Item-Image/mirror/3dtaux3.webp(3)')">
+        </div>
+        <div class="product-image">
+            <img id="mainImage" src="Assets/Item-Image/mirror/3dtaux3.webp" alt="Backpack">
+        </div>
+        <div class="product-details">
+            <div class="product-title">
+                3D Faux Taxidermy of bull</div>
+            <div class="rating">★★★★★ (5/5)</div>
+            <div class="product-price">650.00 €</div>
+            <div class="product-sizes">
+                <button onclick="selectSize(this)">Small</button>
+                <button onclick="selectSize(this)">Medium</button>
+                <button onclick="selectSize(this)" class="active">Large </button>
+            </div>
+            <button class="add-to-cart">Add — 650.00 €</button>
+            <p class="delivery-info">● Estimated delivery on <b>Monday 03 March</b> - Free Returns</p>
+        </div>
+    </div>
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('description')">Description</div>
+        <div class="tab" onclick="showTab('specs')">Specifications</div>
+    </div>
+    <div id="description" class="tab-content active">
+        <h2>Product Description</h2>
+        <p>Oh, give me a home . . . Evoke the wide-open spaces and magical charm of the prairie and bring all of that charm and magic into your home with Near and Deer's gorgeous faux bison head. Made from resin in exquisite detail, </p>
+    </div>
+    <div id="specs" class="tab-content">
+        <h2>Specifications</h2>
+        <ul>
+           <li>Animal friendly</li>
+            <li>Hand painted to order</li>
+            <li>Easy mounting</li>
+        </ul>
+    </div>
+
+<!-----------------footer section --------------------->
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3 class="footer-title">Jensen Decor</h3>
+            <p>Bringing you the finest wall decor to elevate your space with elegance and style.</p>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Metal Wall Art</h4>
+            <ul>
+                <li><a href="abstractmetalart.html">Abstract Metal Art</a></li>
+                <li><a href="geomatricwallart.html">Geometric & Minimalist Designs</a></li>
+                <li><a href="nature-inspired.html">Nature-Inspired </a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Wallpapers</h4>
+            <ul>
+                <li><a href="peel&stickwallpapers.html">Peel & Stick Wallpapers</a></li>
+                <li><a href="texturedwallpapers.html">Textured Wallpapers </a></li>
+                <li><a href="floral&botanicalprints.html">Floral & Botanical Prints</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Photo Frame Art</h4>
+            <ul>
+                <li><a href="collageframes.html">Collage Frames</a></li>
+                <li><a href="singlelargestatementframes.html">Single Large Statement Frames</a></li>
+                <li><a href="wooden&rusticframes.html">Wooden & Rustic Frames</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Mirror Art</h4>
+            <ul>
+                <li><a href="decorativewallmirrors.html">Decorative Wall Mirrors</a></li>
+                <li><a href="lED&backlitmirrors.html">LED & Backlit Mirrors</a></li>
+                <li><a href="geometric&modernmirrors.html">Geometric & Modern Mirrors</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Wall Shelves</h4>
+            <ul>
+                <li><a href="floatingshelves.html">Floating Shelves</a></li>
+                <li><a href="cornershelves.html">Corner Shelves</a></li>
+                <li><a href="hexagonal&geometricshelves.html">Hexagonal & Geometric Shelves</a></li>
+            </ul>
+        </div>
+        <div class="footer-section category">
+            <h4 class="footer-title">Wall Mounted Animals</h4>
+            <ul>
+                <li><a href="metalanimalsilhouettes.html">Metal Animal Silhouettes</a></li>
+                <li><a href="woodencarvedanimalheads.html">Wooden Carved Animal Heads</a></li>
+                <li><a href="3Dfauxtaxidermy.html">3D Faux Taxidermy</a></li>
+            </ul>
+        </div>
+        <!-- <div class="footer-section category">
+            <h4 class="footer-title">Community</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div> -->
+        <div class="footer-section category">
+            <h4 class="footer-title">More</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="compare.html">Comparison</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section newsletter">
+            <h4 class="footer-title">Join Our Newsletter</h4>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section social">
+            <h4 class="footer-title">Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+                <a href="https://x.com/i/flow/login?lang=en"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Jensen Decor. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>  
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+        function selectSize(button) {
+            document.querySelectorAll(".product-sizes button").forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+        }
+        function changeImage(imageSrc) {
+            document.getElementById("mainImage").src = imageSrc;
+        }
+    </script>
+</body>
+</html>
