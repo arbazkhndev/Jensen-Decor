@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Geometric & Minimalist Designs", url: "geomatricwallart.html" },
         {
           name: "Nature-Inspired (Trees, Leaves, Flowers)",
-          url: "nature-inspired.html",
+          url: "natureinspired.html",
         },
       ],
       sizes: ['12" x 16"', '20" x 28"', '28" x 39"'],
     },
     wallpapers: {
       subcategories: [
-        { name: "Peel & Stick Wallpapers", url: "peel&stickwallpapers.html" },
+        { name: "Peel & Stick Wallpapers", url: "peel&stickwallpaper.html" },
         {
           name: "Textured Wallpapers (Brick, Wood, Marble, etc.)",
           url: "texturedwallpapers.html",
