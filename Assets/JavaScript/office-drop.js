@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const categoryData = {
       "metal-wall-art": {
         subcategories: [
-                  { name: "Abstract Metal Art", url: "officecat1-1.html" },
+          { name: "Abstract Metal Art", url: "officecat1-1.html" },
           { name: "Geometric & Minimalist Designs", url: "officecat1-2.html" },
           {
             name: "Nature-Inspired (Trees, Leaves, Flowers)",
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           { name: "Floral & Botanical Prints", url: "officecat2-3.html" },
         ],
-        sizes: ['10" x 14"', '18" x 24"', '24" x 36"'],
+        sizes: ['12" x 16"', '20" x 28"', '28" x 39"'],
       },
       "photo-frame-art": {
         subcategories: [
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
           { name: "Single Large Statement Frames", url: "officecat3-2.html" },
           { name: "Wooden & Rustic Frames", url: "officecat3-3.html" },
         ],
-        sizes: ['8" x 10"', '11" x 14"', '16" x 20"'],
+        sizes: ['12" x 16"', '20" x 28"', '28" x 39"'],
       },
       "mirror-art": {
         subcategories: [
