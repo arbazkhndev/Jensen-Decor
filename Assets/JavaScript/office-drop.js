@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         subcategories: [
           { name: "Peel & Stick Wallpapers", url: "officecat2-1.html" },
           {
-            name: "Textured Wallpapers (Brick, Wood, Marble, etc.)",
+            name: "Textured Wallpapers",
             url: "officecat2-2.html",
           },
           { name: "Floral & Botanical Prints", url: "officecat2-3.html" },
