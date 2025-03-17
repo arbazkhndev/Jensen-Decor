@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "wall-mounted-animals": {
         subcategories: [
-          { name: "Metal Animal Silhouettes", url: "officecat6-1html" },
+          { name: "Metal Animal Silhouettes", url: "officecat6-1.html" },
           { name: "Wooden Carved Animal Heads", url: "officecat6-2.html" },
           { name: "3D Faux Taxidermy", url: "officecat6-3.html" },
         ],
