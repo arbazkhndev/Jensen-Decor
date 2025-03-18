@@ -55,26 +55,29 @@ function selectProduct1()
     }
      else if(product=="val7")
     {
-        document.getElementById("image").src="Assets/Item-Image/img1.webp";
+        document.getElementById("image").src ="Assets/Item-Image/Collage Frames 1.webp";
         document.getElementById("model").innerHTML="Name : Hendley 18 Opening Wall Gallery";
-        document.getElementById("features").innerHTML="Description: Gobius is a genus of fish in the family Gobiidae native to fresh, brackish and marine waters.<br>";
-        document.getElementById("spec").innerHTML="Specifications:  Modern & Industrial Style | Matte Black Paint | You can hang the product in any directions.<br>";
+        document.getElementById("features").innerHTML="Description: Add an industrial flare to your favorite designs. Our metal prints feature super sharp image details and rich, vibrant colors on a lightweight yet durable aluminum canvas. High gloss finish enhances color and produces sharp image details.<br>";
+        document.getElementById("spec").innerHTML =
+          "Specifications:  Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | High-gloss finish enhances image and colors.<br>";
         
     }
      else if(product=="val8")
     {
-        document.getElementById("image").src="Assets/Item-Image/img1.webp";
+        document.getElementById("image").src ="Assets/Item-Image/Collage Frames 2.webp";
         document.getElementById("model").innerHTML="Name : Bryleigh 12 Slot Wood Collage";
-        document.getElementById("features").innerHTML="Description: Gobius is a genus of fish in the family Gobiidae native to fresh, brackish and marine waters.<br>";
-        document.getElementById("spec").innerHTML="Specifications:  Modern & Industrial Style | Matte Black Paint | You can hang the product in any directions.<br>";
+        document.getElementById("features").innerHTML="Description: Add an industrial flare to your favorite designs. Our metal prints feature super sharp image details and rich, vibrant colors on a lightweight yet durable aluminum canvas.<br>";
+        document.getElementById("spec").innerHTML ="Specifications:  Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | High-gloss finish enhances image and colors.<br>";
         
     }
      else if(product=="val9")
     {
-        document.getElementById("image").src="Assets/Item-Image/img1.webp";
+        document.getElementById("image").src ="Assets/Item-Image/Collage Frames 3.webp";
         document.getElementById("model").innerHTML="Name : Westbury Black MDF Picture Frame";
-        document.getElementById("features").innerHTML="Description: Gobius is a genus of fish in the family Gobiidae native to fresh, brackish and marine waters.<br>";
-        document.getElementById("spec").innerHTML="Specifications:  Modern & Industrial Style | Matte Black Paint | You can hang the product in any directions.<br>";
+        document.getElementById("features").innerHTML =
+          "Description: Add an industrial flare to your favorite designs. Our metal prints feature super sharp image details and rich, vibrant colors on a lightweight yet durable aluminum canvas.<br>";
+        document.getElementById("spec").innerHTML =
+          "Specifications:  Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | High-gloss finish enhances image and colors.<br>";
         
     }
     else if(product=="val10")
@@ -210,29 +213,31 @@ function selectProduct2()
             document.getElementById("spe2c").innerHTML="Specifications:  Collapse | Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | 3/4 wooden frame on back to offset from wall | Wire or sawtooth hanger depending on size (hanging hardware not included)<br>";
             
         }
-         else if(product=="valu7")
-        {
-            document.getElementById("image2").src="Assets/Item-Image/img1.webp";
-            document.getElementById("model2").innerHTML="Name : Hendley 18 Opening Wall Gallery";
-            document.getElementById("features2").innerHTML="Description: Gobius is a genus of fish in the family Gobiidae native to fresh, brackish and marine waters.<br>";
-            document.getElementById("spec2").innerHTML="Specifications:  Modern & Industrial Style | Matte Black Paint | You can hang the product in any directions.<br>";
-            
-        }
-         else if(product=="valu8")
-        {
-            document.getElementById("image2").src="Assets/Item-Image/img1.webp";
-            document.getElementById("model2").innerHTML="Name : Bryleigh 12 Slot Wood Collage";
-            document.getElementById("features2").innerHTML="Description: Gobius is a genus of fish in the family Gobiidae native to fresh, brackish and marine waters.<br>";
-            document.getElementById("spec2").innerHTML="Specifications:  Modern & Industrial Style | Matte Black Paint | You can hang the product in any directions.<br>";
-            
-        }
-         else if(product=="valu9")
-        {
-            document.getElementById("image2").src="Assets/Item-Image/img1.webp";
-            document.getElementById("model2").innerHTML="Name : Westbury Black MDF Picture Frame";
-            document.getElementById("features2").innerHTML="Description: Gobius is a genus of fish in the family Gobiidae native to fresh, brackish and marine waters.<br>";
-            document.getElementById("spec2").innerHTML="Specifications:  Modern & Industrial Style | Matte Black Paint | You can hang the product in any directions.<br>";
-            
+     else if(product=="valu7")
+    {
+        document.getElementById("image2").src ="Assets/Item-Image/Collage Frames 1.webp";
+        document.getElementById("model2").innerHTML="Name : Hendley 18 Opening Wall Gallery";
+        document.getElementById("features2").innerHTML="Description: Add an industrial flare to your favorite designs. Our metal prints feature super sharp image details and rich, vibrant colors on a lightweight yet durable aluminum canvas. High gloss finish enhances color and produces sharp image details.<br>";
+        document.getElementById("spec2").innerHTML =
+          "Specifications:  Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | High-gloss finish enhances image and colors.<br>";
+        
+    }
+     else if(product=="valu8")
+    {
+        document.getElementById("image2").src ="Assets/Item-Image/Collage Frames 2.webp";
+        document.getElementById("model2").innerHTML="Name : Bryleigh 12 Slot Wood Collage";
+        document.getElementById("features2").innerHTML="Description: Add an industrial flare to your favorite designs. Our metal prints feature super sharp image details and rich, vibrant colors on a lightweight yet durable aluminum canvas.<br>";
+        document.getElementById("spec2").innerHTML ="Specifications:  Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | High-gloss finish enhances image and colors.<br>";
+        
+    }
+     else if(product=="valu9")
+    {
+        document.getElementById("image2").src ="Assets/Item-Image/Collage Frames 3.webp";
+        document.getElementById("model2").innerHTML="Name : Westbury Black MDF Picture Frame";
+        document.getElementById("features2").innerHTML =
+          "Description: Add an industrial flare to your favorite designs. Our metal prints feature super sharp image details and rich, vibrant colors on a lightweight yet durable aluminum canvas.<br>";
+        document.getElementById("spec2").innerHTML =
+          "Specifications:  Printed on 1/16 thick aluminum sheet canvas | High-gloss finish enhances image and colors | High-gloss finish enhances image and colors.<br>";
         }
         else if(product=="valu10")
             {
